@@ -1,0 +1,942 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  font-family: Roboto-Regular;
+}
+/* Убираем внутренние отступы */
+ul,
+ol,
+li {
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 1.11vw;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: #f2f2f2;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #1a1a1a;
+  line-height: 4rem;
+}
+h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  line-height: 2.7rem;
+}
+h3 {
+  font-size: 1.5rem;
+  color: #aaaaaa;
+  font-family: Roboto-Light;
+  line-height: 2rem;
+}
+p {
+  color: #aaaaaa;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+/* Упрощаем работу с изображениями}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  width: 92.1vw;
+  margin: 0px auto;
+}
+header .contact {
+  width: 100%;
+  height: 3.5vh;
+  background-color: #f4f4f4;
+}
+
+header .contact ul {
+  height: 3.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+header .contact li {
+  display: inline-block;
+  margin-right: 2%;
+}
+
+header .contact a {
+  color: #aaa;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.header__nav {
+  height: 11.69vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.header__nav a {
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 1rem;
+  letter-spacing: 0.12rem;
+}
+
+a.logo-company img {
+  width: 3.3rem;
+  height: auto;
+}
+.wrapper-burger {
+  display: flex;
+  align-items: center;
+  margin-left: 8.26vw;
+}
+nav.nav-body {
+  width: 36.5vw;
+}
+.nav-body ul {
+  display: flex;
+  justify-content: space-between;
+}
+.logo-map,
+.logo-order {
+  position: relative;
+  margin-right: 1vw;
+  height: auto;
+}
+
+.logo-map {
+  top: 0.3rem;
+  width: 1rem;
+}
+.logo-order {
+  top: 0.2rem;
+  width: 1.3rem;
+}
+.header__burger {
+  display: none;
+}
+.main-photo {
+  width: 100%;
+  position: relative;
+  top: 3vh;
+  margin-bottom: 23%;
+}
+
+article.main-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+article.main-article h1 {
+  width: 27%;
+}
+article.main-article h3 {
+  width: 43%;
+  position: relative;
+  top: 20px;
+}
+
+section.main {
+  margin-bottom: 25%;
+}
+div.top_rooms,
+div.bottom-rooms {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.91vh;
+}
+div.top_rooms div:first-child,
+div.bottom-rooms div:first-child {
+  margin-right: 1.67vw;
+}
+
+section.rooms {
+  margin-bottom: 30%;
+}
+section.rooms img {
+  width: 40.83vw;
+}
+
+section.rooms h3 {
+  color: #1a1a1a;
+}
+
+.firms h1 {
+  text-align: center;
+  margin-bottom: 3.3vh;
+}
+.firms h3 {
+  color: #4a4a4a;
+  text-align: center;
+  margin-bottom: 15%;
+}
+.img-firms {
+  display: flex;
+  justify-content: space-around;
+}
+.firms__container {
+  margin: 0 8.3vw;
+}
+.firms__container div {
+  margin-bottom: 6vh;
+}
+.img-firms img {
+  height: 6vw;
+}
+section.firms {
+  margin-bottom: 25%;
+}
+
+.slider {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 10vh;
+}
+.slider img {
+  height: auto;
+  width: 100%;
+}
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: 44%;
+  z-index: 10;
+  font-size: 0;
+  width: 1.6vw;
+  height: 6vh;
+  border: 0;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 3vw;
+  background: url("/slider/arrow/arrow-left.png") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+  right: 3vw;
+  background: url("/slider/arrow/arrow-right.png") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5vw;
+}
+
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0 0.63vw 0 0;
+}
+
+.slider .slick-dots button {
+  border: 0;
+  color: #ffffff00;
+  outline: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: #afafaf;
+}
+
+.slider .slick-dots li.slick-active button {
+  background-color: #46856e;
+}
+
+section.product-capabil {
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 29%;
+}
+section.product-capabil h1 {
+  text-align: left;
+  margin: 0 5vw 3vh 5vw;
+}
+.capabil__a {
+  margin-bottom: 8.67vh;
+}
+a.get-touch {
+  color: #46856e;
+  text-transform: uppercase;
+  font-size: 1.7vh;
+  letter-spacing: 0.09vh;
+}
+
+.product-capabil h3 {
+  color: #1a1a1a;
+  margin-bottom: 2.2vh;
+}
+
+.capabil__img {
+  text-align: center;
+  margin-bottom: 3.1vh;
+}
+.capabil__img img {
+  width: 12vw;
+}
+.capabils {
+  display: flex;
+  justify-content: space-around;
+}
+.capabil-cost,
+.capabil-time,
+.capabil-flex {
+  width: 21.9vw;
+}
+
+.section__rating {
+  background: url("/photos_img/rating.png") 50% 0 no-repeat;
+  background-size: auto 93vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  margin-bottom: 15%;
+}
+
+.section__rating .rating {
+  padding: 10% 0;
+  height: auto;
+  width: 83vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rating > div {
+  width: 18vw;
+  margin-left: 8vw;
+  margin-bottom: 4%;
+}
+.rating .stars {
+  display: flex;
+  margin-bottom: 1vh;
+}
+.rating .stars img {
+  width: 2rem;
+}
+.rating .comment {
+  margin-bottom: 1vh;
+}
+.rating .comment h3 {
+  color: #ffffff;
+}
+
+.rating .img-firm img {
+  width: 10vw;
+}
+
+.rating .link-more a {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.11vw;
+  padding: 1.5vh;
+}
+section.make-work .work__h1 {
+  width: 61vw;
+  height: auto;
+  margin: 0px auto 1.1rem auto;
+}
+.work__h1 h1 {
+  color: #aaaaaa;
+}
+section.make-work {
+  margin-bottom: 20%;
+}
+section.make-work .work__slogo {
+  margin: 0 auto 10% auto;
+  width: 61vw;
+  height: auto;
+}
+
+section.make-work > article {
+  width: 83vw;
+  height: auto;
+  margin: 0 auto 7.8vh auto;
+  display: flex;
+  align-items: center;
+}
+
+section.make-work article div {
+  position: relative;
+  margin: 0 auto;
+  width: 21.5vw;
+}
+
+section.make-work article div h2 {
+  margin-bottom: 3vh;
+}
+section.make-work article img {
+  width: 40vw;
+  height: 40vw;
+}
+
+.slider-next {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 20%;
+}
+.slider-next .slick-arrow {
+  display: none;
+  visibility: hidden;
+}
+.slider-next img {
+  height: auto;
+  width: 92vw;
+}
+
+section.free-trial {
+  display: flex;
+  flex-direction: column;
+  background: #e5e5e5;
+  border-radius: 2px;
+  margin: 0 auto 9.6vh auto;
+  height: 60%;
+}
+
+.trial-wrapper {
+  width: 55.5vw;
+  padding: 8% 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trial-wrapper .wrapper__item {
+  width: 13.9vw;
+  height: 6.21vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section.free-trial img {
+  height: auto;
+  width: 7vw;
+  margin: 0 auto 2.7vh auto;
+}
+
+section.free-trial .vector {
+  padding-bottom: 5%;
+}
+section.free-trial h1 {
+  text-align: center;
+  padding-top: 3%;
+}
+
+section.free-trial h4 {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+.trial__link {
+  display: flex;
+  justify-content: center;
+}
+a.get-room {
+  color: #ffffff;
+  background-color: #46856e;
+  text-transform: uppercase;
+  line-height: 4rem;
+  font-size: 1rem;
+  padding: 0 2vw;
+  margin-bottom: 1%;
+}
+
+section.free-trial p {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+footer {
+  height: auto;
+  background-color: #2b2b2b;
+}
+
+div.footer__wrapper {
+  padding: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer__inf {
+  display: flex;
+  flex-direction: column;
+}
+.footer__logo-comp img {
+  height: auto;
+  width: 4vw;
+  margin-right: 4.5%;
+  margin-left: 4.5%;
+  display: flex;
+  align-items: center;
+}
+.about-support {
+  display: flex;
+}
+.showrooms-office {
+  display: flex;
+}
+.about-support h4,
+.showrooms-office h4,
+.follow h4 {
+  margin-bottom: 2vh;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+.about-support h4,
+.about-support a,
+.showrooms-office h4,
+.showrooms-office a {
+  color: #ffffff;
+}
+.about-support > div,
+.showrooms-office > div {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 24%;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.follow {
+  width: 9vw;
+}
+
+.follow a img {
+  margin-right: 0.6vw;
+  width: 1.25rem;
+  height: auto;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  } 
+  p {
+    color: #aaaaaa;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  } 
+  section.make-work article div {
+    position: relative;
+    margin: 0 auto;
+    width: 45%;
+  }
+
+  .header__nav a {
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 1rem;
+    letter-spacing: 0.12rem;
+  }
+  .logo-map {
+    top: 0.3rem;
+    width: 1.6rem;
+  }
+  .logo-order {
+    top: 0.2rem;
+    width: 1.9rem;
+  }
+  a.logo-company img {
+    width: 5rem;
+    height: auto;
+  }
+  section.free-trial h4 {
+    font-size: 1.4rem;
+  }
+  section.free-trial p {
+    text-align: center;
+    padding-bottom: 2%;
+    font-size: 1.4rem;
+  }
+  .about-support > div, .showrooms-office > div {
+    font-size: 1.3rem;
+   }
+   .follow {
+    width: 15%;
+   }
+   .follow a img {
+    width: 2rem;
+    height: auto;
+   }
+   .capabil-cost, .capabil-time, .capabil-flex {
+    width: 25vw;
+   }
+   section.product-capabil {
+    width: auto;
+    margin-bottom: 29%;
+  }
+  a.get-room {
+    line-height: 5rem;
+    font-size: 1.5rem;
+    padding: 0 2vw;
+    margin-bottom: 1%;
+  }
+  
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 0;
+  }
+  .logo-map {
+    width: 1.5rem;
+  }
+  .logo-order {
+    width: 1.8rem;
+  }
+  p {
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+  }
+  html,
+  body {
+    font-size: 8px;
+  }
+  .header__nav {
+    height: 8vh;
+  }
+  .main-photo {
+    padding-top: 10vh;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 15px;
+    margin-right: 3vw;
+  }
+  .header__nav a {
+    font-size: 1.4rem;
+    padding: 1rem;
+    letter-spacing: 0.2rem;
+  }
+  .header__burger span {
+    position: absolute;
+    width: 100%;
+    background-color: #2b2b2b;
+    height: 2px;
+    top: 6.5px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:after,
+  .header__burger:before {
+    content: "";
+    background-color: #2b2b2b;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 6.5px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 6.5px;
+  }
+  .nav-body ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-body ul li {
+    margin-bottom: 2.5vh;
+  }
+  nav.nav-body {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 20%;
+    top: -11%;
+    background-color: #fff;
+    opacity: 0;
+    z-index: -1;
+    transition: all 2s ease 0s;
+  }
+  nav.nav-body.active {
+    top: 11%;
+    opacity: 0.8;
+  }
+  .section__rating {
+    background-size: auto;
+  }
+  .follow a img {
+    margin-right: 0.6vw;
+    width: 4rem;
+    padding: 1px;
+  }
+  .about-support > div,
+  .showrooms-office > div {
+    font-size: 1rem;
+  }
+  .about-support h4,
+  .showrooms-office h4,
+  .follow h4 {
+    font-size: 1.8rem;
+  }
+  .footer__logo-comp img {
+    width: 8vw;
+  }
+  section.free-trial h4 {
+    font-size: 1.4rem;
+    padding: 1vw;
+  }
+  section.free-trial img {
+    height: auto;
+    width: 10vw;
+    margin: 0 auto 2.7% auto;
+  }
+  a.get-room {
+    line-height: 5rem;
+    font-size: 1.3rem;
+    padding: 0px 4vw;
+    margin-bottom: 1%;
+  }
+  .about-support a,
+  .showrooms-office a {
+    padding: 3%;
+    font-size: 1.5rem;
+  }
+  .about-support {
+    margin-bottom: 5%;
+  }
+  section.make-work article div h2 {
+    margin-bottom: 5%;
+  }
+  .rating .link-more {
+    width: auto;
+  }
+  .rating .link-more a {
+    font-size: 1rem;
+  }
+  section.make-work article div {
+    position: relative;
+    margin: 0 12px;
+    width: auto;
+    height: auto;
+    order: 2;
+  }
+  .social-networks {
+    display: flex;
+    flex-direction: column;
+  }
+  a.logo-company img {
+    width: 6vh;
+    height: auto;
+   } 
+}
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  article.main-article {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+  article.main-article h1 {
+    width: auto;
+    position: relative;
+    left: auto;
+  }
+  article.main-article h3 {
+    width: auto;
+    position: relative;
+    top: 20px;
+    left: 0;
+  }
+  .slider .slick-arrow {
+    top: 37%;
+  }
+  section.product-capabil {
+    width: 100%;
+    margin-bottom: 29%;
+  }
+  .capabils {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .capabil-cost,
+  .capabil-time,
+  .capabil-flex {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .capabil__img img {
+    width: 40%;
+  }
+  h3 {
+    color: #aaaaaa;
+    font-family: Roboto-Light;
+    line-height: 2.5rem;
+  }
+  .rating > div {
+    width: 40%;
+    margin-left: 8vw;
+    margin-bottom: 4%;
+  }
+  .rating .img-firm img {
+    width: 50%;
+  }
+  section.make-work .work__h1 {
+    width: auto;
+    height: auto;
+    margin: 0px auto 1.1rem auto;
+  }
+  h1 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    line-height: 3rem;
+`  }
+    section.make-work .work__slogo {
+      margin: 0 auto 10% auto;
+      width: auto;
+     height: auto;
+    }
+    section.make-work > article {
+      width: 83vw;
+      height: auto;
+      margin: 0 auto 7.8vh auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  }
+  section.make-work article img {
+    width: 60vw;
+    height: 60vw;
+    margin-bottom: 30px;
+  }
+  article.make-work .purpose__text {
+    order: 1;
+  }
+  section.free-trial h4 {
+    font-size: 1rem;
+    padding: 1vw;
+  }
+  .trial-wrapper {
+    width: 100%;
+    padding: 8% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ a.get-room {
+  line-height: 4rem; 
+ }
+ .footer__logo-comp {
+   display: none;
+ }
+ a.logo-company img {
+  width: 3.3rem;
+  height: auto;
+ } 
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+}
